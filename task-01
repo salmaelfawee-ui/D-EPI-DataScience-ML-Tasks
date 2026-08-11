@@ -1,0 +1,337 @@
+# ============================================================
+# Questions on Python Data Types
+# ============================================================
+
+
+# ------------------------------------------------------------
+# 1. Lists
+# ------------------------------------------------------------
+
+# Create a list containing numbers 1 to 5
+numbers = [1, 2, 3, 4, 5]
+
+# Append 6
+numbers.append(6)
+
+# Replace the second element with 10
+numbers[1] = 10
+
+# Print the list
+print(numbers)
+
+
+# ------------------------------------------------------------
+# 2. List Operations
+# ------------------------------------------------------------
+
+my_list = ['apple', 'banana', 'cherry', 'date']
+
+# Access the first element
+print(my_list[0])
+
+# Remove the last element
+my_list.pop()
+
+# Insert 'grape' at index 2
+my_list.insert(2, 'grape')
+
+# Print modified list
+print(my_list)
+
+
+# ------------------------------------------------------------
+# 3. Sets
+# ------------------------------------------------------------
+
+my_set = {1, 2, 3, 4}
+
+# Add 5
+my_set.add(5)
+
+# Try to add 3 again
+# Nothing happens because sets do not allow duplicate values
+my_set.add(3)
+
+# Remove 2
+my_set.remove(2)
+
+# Print final set
+print(my_set)
+
+
+# ------------------------------------------------------------
+# 4. Set Operations
+# ------------------------------------------------------------
+
+my_set = {'red', 'green', 'blue'}
+
+# Check if green is present
+print('green' in my_set)
+
+# Add yellow
+my_set.add('yellow')
+
+# Remove red
+my_set.remove('red')
+
+# Print modified set
+print(my_set)
+
+
+# ------------------------------------------------------------
+# 5. Tuples
+# ------------------------------------------------------------
+
+my_tuple = (1, 2, 3, 4, 5)
+
+# Access the third element
+print(my_tuple[2])
+
+# Tuples cannot be modified
+# my_tuple[1] = 10
+# This would give: TypeError
+
+# Print tuple
+print(my_tuple)
+
+
+# ------------------------------------------------------------
+# 6. Tuple Operations
+# ------------------------------------------------------------
+
+my_tuple = ('apple', 'banana', 'cherry')
+
+# Access the last element
+print(my_tuple[-1])
+
+# Check if banana exists
+print('banana' in my_tuple)
+
+# Print tuple
+print(my_tuple)
+
+
+# ------------------------------------------------------------
+# 7. Dictionaries
+# ------------------------------------------------------------
+
+my_dict = {
+    'name': 'John',
+    'age': 25,
+    'city': 'New York'
+}
+
+# Access name
+print(my_dict['name'])
+
+# Change age to 26
+my_dict['age'] = 26
+
+# Add job
+my_dict['job'] = 'Engineer'
+
+# Print modified dictionary
+print(my_dict)
+
+
+# ------------------------------------------------------------
+# 8. Dictionary Operations
+# ------------------------------------------------------------
+
+my_dict = {
+    'brand': 'Toyota',
+    'model': 'Corolla',
+    'year': 2019
+}
+
+# Access model
+print(my_dict['model'])
+
+# Remove year
+del my_dict['year']
+
+# Add color
+my_dict['color'] = 'blue'
+
+# Print modified dictionary
+print(my_dict)
+
+
+# ============================================================
+# Exercises - Sets
+# ============================================================
+
+mix_fruits = {
+    'Guava',
+    'Pear',
+    'Mango',
+    'Apple',
+    'Fig',
+    'Orange',
+    'Banana'
+}
+
+A = {19, 22, 24, 20, 25, 26}
+
+B = {19, 22, 20, 25, 26, 24, 28, 27}
+
+num = [22, 19, 24, 25, 26, 24, 25, 24]
+
+
+# ============================================================
+# Level 1 - Tuples
+# ============================================================
+
+# 1. Create fruits and vegetables tuples
+fruits = ('Apple', 'Banana', 'Mango', 'Orange', 'Pear')
+
+vegetables = ('Tomato', 'Potato', 'Carrot', 'Onion')
+
+
+# 2. Join fruits and vegetables
+fruits_vegetables = fruits + vegetables
+
+
+# 3. How many fruits and vegetables?
+print(len(fruits_vegetables))
+
+
+# 4. Add mushroom and beverage
+mushroom = ('Mushroom',)
+
+beverage = ('Coffee',)
+
+food_tuple = fruits_vegetables + mushroom + beverage
+
+print(food_tuple)
+
+
+# ============================================================
+# Level 2
+# ============================================================
+
+# 1. Unpack fruits_vegetables, mushroom and beverage
+*fruits_vegetables, mushroom, beverage = food_tuple
+
+print(fruits_vegetables)
+print(mushroom)
+print(beverage)
+
+
+# 2. Change food_tuple to food_list
+food_list = list(food_tuple)
+
+print(food_list)
+
+
+# 3. Slice out the middle item/items
+middle_items = food_list[4:7]
+
+print(middle_items)
+
+
+# 4. First three and last three items
+first_three = food_list[:3]
+
+last_three = food_list[-3:]
+
+print(first_three)
+print(last_three)
+
+
+# 5. Delete food_tuple
+del food_tuple
+
+
+# 6. Check if an item exists in tuple
+asian_countries = (
+    'India',
+    'China',
+    'Singapore',
+    'Thailand',
+    'Indonesia'
+)
+
+# Check Finland
+print('Finland' in asian_countries)
+
+# Check India
+print('India' in asian_countries)
+
+
+# ============================================================
+# Exercises - Dictionary
+# ============================================================
+
+# 1. Create an empty dictionary called bird
+bird = {}
+
+
+# 2. Add name, color, breed, legs and age
+bird['name'] = 'Eagle'
+bird['color'] = 'Brown'
+bird['breed'] = 'Golden Eagle'
+bird['legs'] = 2
+bird['age'] = 5
+
+print(bird)
+
+
+# 3. Create student dictionary
+student = {
+    'first_name': 'John',
+    'last_name': 'Smith',
+    'gender': 'Male',
+    'age': 20,
+    'marital_status': 'Single',
+    'skills': ['Python', 'HTML'],
+    'country': 'Egypt',
+    'city': 'Cairo',
+    'address': 'Cairo, Egypt'
+}
+
+print(student)
+
+
+# 4. Get the length of student dictionary
+print(len(student))
+
+
+# 5. Get skills and check data type
+print(student['skills'])
+print(type(student['skills']))
+
+
+# 6. Add one or two skills
+student['skills'].append('JavaScript')
+student['skills'].append('SQL')
+
+print(student['skills'])
+
+
+# 7. Get dictionary keys as a list
+keys = list(student.keys())
+
+print(keys)
+
+
+# 8. Get dictionary values as a list
+values = list(student.values())
+
+print(values)
+
+
+# 9. Change dictionary to a list of tuples
+student_items = list(student.items())
+
+print(student_items)
+
+
+# 10. Delete one item from dictionary
+del student['address']
+
+print(student)
+
+
+# 11. Delete one of the dictionaries
+del bird
