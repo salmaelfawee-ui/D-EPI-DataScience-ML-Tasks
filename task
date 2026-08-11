@@ -1,15 +1,18 @@
+# Exercises - Tuples
+
 # Level 1
 
+# 1. Create a tuple containing names of fruits and vegetables
 fruits = ('Apple', 'Banana', 'Mango', 'Orange', 'Pear')
 vegetables = ('Tomato', 'Potato', 'Carrot', 'Onion')
 
-# 1 & 2
+# 2. Join fruits and vegetables tuples
 fruits_vegetables = fruits + vegetables
 
-# 3
+# 3. How many fruits_vegetables do you have?
 print(len(fruits_vegetables))
 
-# 4
+# 4. Add your favorite mushroom and beverage
 mushroom = ('Mushroom',)
 beverage = ('Coffee',)
 
@@ -20,30 +23,30 @@ print(food_tuple)
 
 # Level 2
 
-# 1
+# 1. Unpack fruits_vegetables, mushroom and beverage from food_tuple
 *fruits_vegetables, mushroom, beverage = food_tuple
 
 print(fruits_vegetables)
 print(mushroom)
 print(beverage)
 
-# 2
+# 2. Change food_tuple to food_list
 food_list = list(food_tuple)
 
 print(food_list)
 
-# 3
-middle_items = food_list[4:7]
-print(middle_items)
+# 3. Slice out the middle item or items
+middle = food_list[len(food_list)//2]
+print(middle)
 
-# 4
+# 4. Slice out the first three items and the last three items
 print(food_list[:3])
 print(food_list[-3:])
 
-# 5
+# 5. Delete the food_tuple tuple completely
 del food_tuple
 
-# 6
+# 6. Check if an item exists in tuple
 asian_countries = ('India', 'China', 'Singapore', 'Thailand', 'Indonesia')
 
 print('Finland' in asian_countries)
