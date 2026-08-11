@@ -1,0 +1,50 @@
+# Level 1
+
+fruits = ('Apple', 'Banana', 'Mango', 'Orange', 'Pear')
+vegetables = ('Tomato', 'Potato', 'Carrot', 'Onion')
+
+# 1 & 2
+fruits_vegetables = fruits + vegetables
+
+# 3
+print(len(fruits_vegetables))
+
+# 4
+mushroom = ('Mushroom',)
+beverage = ('Coffee',)
+
+food_tuple = fruits_vegetables + mushroom + beverage
+
+print(food_tuple)
+
+
+# Level 2
+
+# 1
+*fruits_vegetables, mushroom, beverage = food_tuple
+
+print(fruits_vegetables)
+print(mushroom)
+print(beverage)
+
+# 2
+food_list = list(food_tuple)
+
+print(food_list)
+
+# 3
+middle_items = food_list[4:7]
+print(middle_items)
+
+# 4
+print(food_list[:3])
+print(food_list[-3:])
+
+# 5
+del food_tuple
+
+# 6
+asian_countries = ('India', 'China', 'Singapore', 'Thailand', 'Indonesia')
+
+print('Finland' in asian_countries)
+print('India' in asian_countries)
